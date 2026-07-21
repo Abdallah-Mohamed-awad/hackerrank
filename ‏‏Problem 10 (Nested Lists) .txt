@@ -1,0 +1,24 @@
+if __name__ == '__main__':
+    students = []
+
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    students.append([name, score])
+
+grade = []
+
+for std in students:
+    grade.append(std[1])
+
+grade = set(grade)
+grade = list(grade)
+grade.sort()
+
+names=[]
+for name in students:
+    if grade[1] == name[1]:
+       names.append(name[0]) 
+names.sort()
+for i in names:
+    print(i)
